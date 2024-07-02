@@ -2,21 +2,24 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
+ 
+    public TurretBlueprint standardTurret;
+    public TurretBlueprint missileLauncher;
     BuildingManager buildingManager;
 
     void Awake()
     {
         buildingManager = GameObject.FindWithTag("BuildManager").GetComponent<BuildingManager>();
     }
-    public void PurchaseStandardTurret()
+    public void SelectStandardTurret()
     {
         Debug.Log("Standard Turret Purchased");
-        buildingManager.SetTurretToBuild(buildingManager.standardTurretPrefab);
+        buildingManager.SelectTurretToBuild(standardTurret);
     }
 
-    public void PurchaseMissileTurret()
+    public void SelectMissileTurret()
     {
         Debug.Log("Another Turret Purchases");
-        buildingManager.SetTurretToBuild(buildingManager.missileTurretPrefab);
+        buildingManager.SelectTurretToBuild(missileLauncher);
     }
 }
