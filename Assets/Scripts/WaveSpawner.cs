@@ -26,13 +26,17 @@ public class WaveSpawner : MonoBehaviour
 
         countdown -= Time.deltaTime;
 
+        countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
+
+        WaveCountdownText.text = string.Format("{0:00.00}", countdown);
+
         WaveCountdownText.text = Mathf.Floor(countdown).ToString();
     }
 
     IEnumerator SpawnWave()
     {
         waveIndex++;
-
+        PlayerStats.Rounds++;
         for (int i = 0; i < waveIndex; i++)
         {
             SpawnEnemy();

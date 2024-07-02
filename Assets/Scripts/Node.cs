@@ -6,6 +6,7 @@ using UnityEngine;
 public class Node : MonoBehaviour
 {
     public Color hoverColor;
+    public Color InsufficientMoneyColor;
     private Color startColor;
 
     public Vector3 positionOffset;
@@ -54,7 +55,14 @@ public class Node : MonoBehaviour
         if (!buildingManager.CanBuild)
             return;
 
-        rend.material.color = hoverColor;
+        if (buildingManager.HasMoney)
+        {
+            rend.material.color = hoverColor;
+        } else
+        {
+            rend.material.color = InsufficientMoneyColor;
+        }
+
     }
 
     void OnMouseExit()
