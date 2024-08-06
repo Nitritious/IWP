@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-
     public float panSpeed = 30f;
     public float panBorderThickness = 10f;
 

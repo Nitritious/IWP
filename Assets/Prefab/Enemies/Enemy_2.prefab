@@ -190,8 +190,9 @@ GameObject:
   - component: {fileID: 2333058883162528219}
   - component: {fileID: 5146460764529969865}
   - component: {fileID: -5957353689042452566}
+  - component: {fileID: 3997810475357876321}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy_2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -241,7 +242,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7eeb608dc97b00f479c4d86478564b5a, type: 2}
+  - {fileID: 2100000, guid: a82c5cd8016a64c4a864b5705c3c80c5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -288,11 +289,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd92f5c4d7a58be4db7b6551a204e6ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: 10
-  startHealth: 100
-  killValue: 50
+  speed: 15
+  startHealth: 150
+  killValue: 20
   deathEffect: {fileID: 5132691558100132491, guid: 4a88231365db3db42896366cdcf409b1, type: 3}
   healthBar: {fileID: 4217946697168447640}
+--- !u!114 &3997810475357876321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4194939619441952560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b2d7b52d95358145913c67f3c371cf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   target: {fileID: 0}
 --- !u!1 &5259213899514387910
 GameObject:

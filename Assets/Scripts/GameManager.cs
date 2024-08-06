@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static bool gameEnded;
 
     public GameObject gameOverUI;
+    public GameObject WinUI;
+
+    public PauseMenu pause;
 
     void Start()
     {
@@ -32,5 +36,11 @@ public class GameManager : MonoBehaviour
     {
         gameEnded = true;
         gameOverUI.SetActive(true);
+    }
+
+    public void WinLevel()
+    {
+        gameEnded = true;
+        WinUI.SetActive(true);
     }
 }
