@@ -19212,7 +19212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f22c1af035192e347821f1623b9f6be7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 2112126576}
   waves:
   - spawnRate: 1
     enemies:
